@@ -1,22 +1,14 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Const } from './x/const';
 
-@Controller()
+@Controller(Const.api_rest_v1)
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  getIntro(): string {
+    return this.appService.getIntro();
   }
 
-  @Get('dis')
-  dis(): string {
-    return 'dkm';
-  }
-
-  @Get('dis22')
-  diss(): string {
-    return 'dkm2';
-  }
 }

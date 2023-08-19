@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Vocab } from './modules/vocabs/vocab.entity';
 
 import { VocabController } from './modules/vocabs/vocab.controller';
 import { VocabService } from './modules/vocabs/vocab.service';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
